@@ -58,11 +58,32 @@ public class CarCostCalculation {
 		
 		//Announcing costs to the user
 		System.out.println(" ");
-		System.out.println("Cost to own after year " + yearOne + " for regular car: $" + normalCostYrOne + ", for hybrid car: $" + hybridCostYrOne);
-		System.out.println("Cost to own after year " + yearTwo + " for regular car: $" + normalCostYrTwo + ", for hybrid car: $" + hybridCostYrTwo);
-		System.out.println("Cost to own after year " + yearThree + " for regular car: $" + normalCostYrThree + ", for hybrid car: $" + hybridCostYrThree);
-		System.out.println("Cost to own after year " + yearFour + " for regular car: $" + normalCostYrFour + ", for hybrid car: $" + hybridCostYrFour);
-		System.out.println("Cost to own after year " + yearFive + " for regular car: $" + normalCostYrFive + ", for hybrid car: $" + hybridCostYrFive);
+		System.out.print("Cost to own after year " + yearOne + " for regular car: $");
+		System.out.printf("%.2f", normalCostYrOne);
+		System.out.print(", for hybrid car: $");
+		System.out.printf("%.2f", hybridCostYrOne);
+		System.out.println(" ");
+		System.out.print("Cost to own after year " + yearTwo + " for regular car: $");
+		System.out.printf("%.2f", normalCostYrTwo);
+		System.out.print(", for hybrid car: $");
+		System.out.printf("%.2f", hybridCostYrTwo);
+		System.out.println(" ");
+		System.out.print("Cost to own after year " + yearThree + " for regular car: $");
+		System.out.printf("%.2f", normalCostYrThree);
+		System.out.print(", for hybrid car: $");
+		System.out.printf("%.2f", hybridCostYrThree);
+		System.out.println(" ");
+		System.out.print("Cost to own after year " + yearFour + " for regular car: $");
+		System.out.printf("%.2f", normalCostYrFour);
+		System.out.print(", for hybrid car: $");
+		System.out.printf("%.2f", hybridCostYrFour);
+		System.out.println(" ");
+		System.out.print("Cost to own after year " + yearFive + " for regular car: $");
+		System.out.printf("%.2f", normalCostYrFive);
+		System.out.print(", for hybrid car: $");
+		System.out.printf("%.2f", hybridCostYrFive);
+		System.out.println(" ");
+		
 				
 		//Finding out which car pays back after 5 years 
 		if (normalCostYrFive<hybridCostYrFive) {
