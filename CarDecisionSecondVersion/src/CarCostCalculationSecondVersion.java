@@ -10,20 +10,22 @@ public class CarCostCalculationSecondVersion {
 		int yearFour = 4;
 		int yearFive = 5;
 		
+		String stickerHybrid = "Toyota,Prius,31000,30";
+		String stickerRegular= "Toyota,Corolla,28000,20";
+		String [] hybridStuff = stickerHybrid.split(",");
+		String [] regularStuff = stickerRegular.split(",");
+		
+		int mpgNormalCar = Integer.parseInt(regularStuff[3]);
+		int mpgHybridCar = Integer.parseInt(hybridStuff[3]);
+		double normalCarCost = Integer.parseInt(regularStuff[2]);
+		double hybridCarCost = Integer.parseInt(hybridStuff[2]);
+		
+		String regularMake = regularStuff[0];
+		String hybridMake = hybridStuff[0];
+		String regularModel = regularStuff[1];
+		String hybridModel = hybridStuff[1];
 		
 		Scanner enter = new Scanner(System.in);
-		
-		System.out.print("Enter the cost of the normal car: ");
-		double normalCarCost = enter.nextDouble();
-		
-		System.out.print("Enter the miles per gallon of the normal car: ");
-		double mpgNormalCar = enter.nextDouble();
-		
-		System.out.print("Enter the cost of the hybrid car: ");
-		double hybridCarCost = enter.nextDouble();
-		
-		System.out.print("Enter the miles per gallon of the hybrid car: ");
-		double mpgHybridCar = enter.nextDouble();
 		
 		System.out.print("Enter the number of miles traveled in a year: ");
 		double oneYearMiles = enter.nextDouble();
@@ -58,38 +60,37 @@ public class CarCostCalculationSecondVersion {
 		
 		//Announcing costs to the user
 		System.out.println(" ");
-		System.out.print("Cost to own after year " + yearOne + " for regular car: $");
+		System.out.print("Cost to own " + regularMake + " " + regularModel + " " + "after year " + yearOne + ": ");
 		System.out.printf("%.2f", normalCostYrOne);
-		System.out.print(", for hybrid car: $");
+		System.out.print(", for " + hybridMake + " " + hybridModel + ": ");
 		System.out.printf("%.2f", hybridCostYrOne);
 		System.out.println(" ");
-		System.out.print("Cost to own after year " + yearTwo + " for regular car: $");
+		System.out.print("Cost to own " + regularMake + " " + regularModel + " " + "after year " + yearTwo + ": ");
 		System.out.printf("%.2f", normalCostYrTwo);
-		System.out.print(", for hybrid car: $");
+		System.out.print(", for " + hybridMake + " " + hybridModel + ": ");
 		System.out.printf("%.2f", hybridCostYrTwo);
 		System.out.println(" ");
-		System.out.print("Cost to own after year " + yearThree + " for regular car: $");
+		System.out.print("Cost to own " + regularMake + " " + regularModel + " " + "after year " + yearThree + ": ");
 		System.out.printf("%.2f", normalCostYrThree);
-		System.out.print(", for hybrid car: $");
+		System.out.print(", for " + hybridMake + " " + hybridModel + ": ");
 		System.out.printf("%.2f", hybridCostYrThree);
 		System.out.println(" ");
-		System.out.print("Cost to own after year " + yearFour + " for regular car: $");
+		System.out.print("Cost to own " + regularMake + " " + regularModel + " " + "after year " + yearFour + ": ");
 		System.out.printf("%.2f", normalCostYrFour);
-		System.out.print(", for hybrid car: $");
+		System.out.print(", for " + hybridMake + " " + hybridModel + ": ");
 		System.out.printf("%.2f", hybridCostYrFour);
 		System.out.println(" ");
-		System.out.print("Cost to own after year " + yearFive + " for regular car: $");
+		System.out.print("Cost to own " + regularMake + " " + regularModel + " " + "after year " + yearFive + ": ");
 		System.out.printf("%.2f", normalCostYrFive);
-		System.out.print(", for hybrid car: $");
+		System.out.print(", for " + hybridMake + " " + hybridModel + ": ");
 		System.out.printf("%.2f", hybridCostYrFive);
 		System.out.println(" ");
-		
 				
 		//Finding out which car pays back after 5 years 
 		if (normalCostYrFive<hybridCostYrFive) {
-			System.out.println("The regular car pays back after 5 years.");}
+			System.out.println("The " + regularMake + " " + regularModel + " " + "pays back after 5 years.");}
 		else if (normalCostYrFive>hybridCostYrFive) {
-			System.out.println("The hybrid car pays back after 5 years.");}
+			System.out.println("The " + hybridMake + " " + hybridModel + " " + "pays back after 5 years.");}
 		else {
 			System.out.println("Both cars have the same cost after 5 years.");}
 		
